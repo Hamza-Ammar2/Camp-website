@@ -1,0 +1,165 @@
+html {
+    width: 100%;
+    height: 100%;
+}
+body {
+    margin: 0;
+    padding: 0 50px 0 50px;
+    width: calc(100% - 100px);
+    height: fit-content;
+    display: flex;
+    gap: 40px;
+    flex-direction: column;
+    font-family: sans-serif;
+    padding-bottom: 30px;
+    overflow-x: hidden;
+}
+
+header {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    height: fit-content;
+    width: 500px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    font-size: 1.1rem;
+    gap: 20px;
+}
+
+input, textarea {
+    background-color: rgba(188, 188, 201, 0.2);
+    padding: 20px;
+    font-size: inherit;
+    font-family: inherit;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    resize: none;
+}
+
+textarea {
+    height: auto;
+}
+
+button {
+    padding: 20px;
+    font-size: inherit;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.text {
+    fill: inherit;
+}
+
+.logo {
+    fill: black;
+    transition: all 0.3s ease;
+}
+
+.logo:hover {
+    fill: orangered;
+    transform: scale(110%, 110%);
+    cursor: pointer;
+}
+
+button:hover {
+    cursor: pointer;
+    transform: scale(110%, 110%);
+}
+
+a:hover {
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.menu {
+    display: none;
+    padding: 5px;
+    background-color: rgba(188, 188, 201, 0.2);
+    border-radius: 3px;
+    z-index: 2;
+}
+
+nav {
+    position: fixed;
+    padding: 20px 20px 20px 20px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: calc(100% - 40px);
+    top: 0%;
+    transition: all 0.3s ease;
+    left: 100%;
+    z-index: 1;
+    background-color: rgb(188, 188, 201);
+    gap: 20px;
+    font-weight: bolder;
+    font-size: 1.5rem;
+}
+
+nav a {
+    transition: all 0.3s ease;
+}
+
+.menu:hover {
+    cursor: pointer;
+}
+
+nav a:hover {
+    cursor: pointer;
+    transform: scale(110%, 110%);
+    color: orangered;
+}
+
+.slide {
+    transform: translateX(-100%);
+}
+
+
+@media (width <= 800px) {
+    main {
+        align-self: flex-start;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    header p, .home, .logout {
+        display: none;
+    }
+}
+
+@media (width <= 600px) {
+    body {
+        padding: 0 20px 0 20px;
+        width: calc(100% - 40px);
+        padding-bottom: 40px;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    main {
+        width: 100%;
+        align-self: center;
+    }
+}
